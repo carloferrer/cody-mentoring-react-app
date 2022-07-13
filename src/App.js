@@ -2,12 +2,21 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  var someObject = require('./actinfo.json');
+
+  var actOneWaypointObject = {
+    actOneTown: someObject[1].town,
+    actOneWaypoint: someObject[1].waypoint2,
+  };
+
+  console.table(actOneWaypointObject)
+
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          {actOneWaypointObject.actOneWaypoint}
         </p>
         <a
           className="App-link"
